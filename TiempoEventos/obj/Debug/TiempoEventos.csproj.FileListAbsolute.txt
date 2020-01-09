@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\TiempoEventos\bin\Debug\TiempoEventos.exe.config
+C:\Users\sinver.reyes\source\repos\TiempoEventos\bin\Debug\TiempoEventos.exe
+C:\Users\sinver.reyes\source\repos\TiempoEventos\bin\Debug\TiempoEventos.pdb
+C:\Users\sinver.reyes\source\repos\TiempoEventos\obj\Debug\TiempoEventos.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\TiempoEventos\obj\Debug\TiempoEventos.exe
+C:\Users\sinver.reyes\source\repos\TiempoEventos\obj\Debug\TiempoEventos.pdb
