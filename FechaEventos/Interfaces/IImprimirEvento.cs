@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FechaEventos.Interfaces
 {
-    public interface ICerrarConsola
+    public interface IImprimirEvento
     {
-        void CerrarConsola();
+        void PrintMensajeEvento(string _cNombreEvento, string _cYaOcurrio, string _cPeriodo);
     }
 }

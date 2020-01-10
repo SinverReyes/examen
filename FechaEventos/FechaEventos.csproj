@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\CloseConsole.cs" />
+    <Compile Include="Clases\ImprimirSimple.cs" />
+    <Compile Include="Clases\ImprimirEvento.cs" />
     <Compile Include="Clases\ObtenerDiferenciaFechaEventos.cs" />
     <Compile Include="Clases\ObtenerInfoArchivoTXT.cs" />
     <Compile Include="Clases\Evento.cs" />
     <Compile Include="Interfaces\IArchivos.cs" />
-    <Compile Include="Interfaces\IImpresiones.cs" />
+    <Compile Include="Interfaces\IImprimirSimple.cs" />
     <Compile Include="Interfaces\ICerrarConsola.cs" />
+    <Compile Include="Interfaces\IImprimirEvento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

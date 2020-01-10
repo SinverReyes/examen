@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FechaEventos.Interfaces
 {
-    public interface IImpresiones
+    public interface IImprimirSimple
     {
         void print(string _Mensajes);
  

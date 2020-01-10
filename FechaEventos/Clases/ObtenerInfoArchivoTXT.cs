@@ -6,19 +6,15 @@ using TiempoEventos;
 
 namespace FechaEventos.Clases
 {
-    public class ObtenerInfoArchivoTXT : IArchivos, IImpresiones, ICerrarConsola
+    public class ObtenerInfoArchivoTXT : IArchivos
     {
         public ObtenerInfoArchivoTXT()
         {
         }
 
-        public void CerrarConsola()
-        {
-            Environment.Exit(-1);
-        }
-
         public List<Evento> FomatearDatosArchivo(StreamReader _sr, List<Evento> _datos)
         {
+            IImprimirSimple ImprimirMensajeSimple = new ImprimirSimple();
             string linea;
             int cont = 0;
             try
@@ -37,13 +33,13 @@ namespace FechaEventos.Clases
                     cont++;
                 }
             }
-            catch (Exception) { print("El formato de los datos del archivo no es el correcto"); }
+            catch (Exception) { ImprimirMensajeSimple.print("El formato de los datos del archivo no es el correcto"); }
             return _datos;
         }
 
         public List<Evento> LeerArchivo(string _rutaArchivo)
         {
-
+            IImprimirSimple ImprimirMensajeSimple = new ImprimirSimple();
             List<Evento> datos = new List<Evento>();
             try
             {
@@ -55,15 +51,15 @@ namespace FechaEventos.Clases
             }
             catch (FileNotFoundException)
             {
-                print("No se encontró el archivo, introduzca una ruta valida");
+                ImprimirMensajeSimple.print("No se encontró el archivo, introduzca una ruta valida");
             }
             catch (NotSupportedException)
             {
-                print("No se puede leer el archivo");
+                ImprimirMensajeSimple.print("No se puede leer el archivo");
             }
             catch (ArgumentException)
             {
-                print("Debe de Ingresar una ruta");
+                ImprimirMensajeSimple.print("Debe de Ingresar una ruta");
             }
 
             return datos;
@@ -79,11 +75,6 @@ namespace FechaEventos.Clases
 
             return ruta;
         }
-
-        public void print(string _Mensajes)
-        {
-            Console.WriteLine(_Mensajes);
-        }        
-        
+                
     }
 }

@@ -4,3 +4,9 @@ C:\Users\sinver.reyes\source\repos\FechaEventos\bin\Debug\FechaEventos.pdb
 C:\Users\sinver.reyes\source\repos\FechaEventos\obj\Debug\FechaEventos.csprojAssemblyReference.cache
 C:\Users\sinver.reyes\source\repos\FechaEventos\obj\Debug\FechaEventos.exe
 C:\Users\sinver.reyes\source\repos\FechaEventos\obj\Debug\FechaEventos.pdb
+C:\Users\sinver.reyes\Documents\GitHub\examen\FechaEventos\bin\Debug\FechaEventos.exe.config
+C:\Users\sinver.reyes\Documents\GitHub\examen\FechaEventos\bin\Debug\FechaEventos.exe
+C:\Users\sinver.reyes\Documents\GitHub\examen\FechaEventos\bin\Debug\FechaEventos.pdb
+C:\Users\sinver.reyes\Documents\GitHub\examen\FechaEventos\obj\Debug\FechaEventos.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\Documents\GitHub\examen\FechaEventos\obj\Debug\FechaEventos.exe
+C:\Users\sinver.reyes\Documents\GitHub\examen\FechaEventos\obj\Debug\FechaEventos.pdb
