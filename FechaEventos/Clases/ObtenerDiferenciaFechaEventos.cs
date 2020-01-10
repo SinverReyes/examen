@@ -9,11 +9,11 @@ namespace FechaEventos.Clases
     {
         public void ObtenerEventosPasadosFuturos()
         {
-            ObtenerInfoArchivoTXT instancia = new ObtenerInfoArchivoTXT();
+            IArchivos archivos = new ObtenerInfoArchivoTXT();
 
-            string cRutaArchivo = instancia.ObtenerRutaArchivo();
+            string cRutaArchivo = archivos.ObtenerRutaArchivo();
 
-            var lstEventos = instancia.LeerArchivo(cRutaArchivo);
+            var lstEventos = archivos.LeerArchivo(cRutaArchivo);
 
             Calculardiferencia(lstEventos);
 
