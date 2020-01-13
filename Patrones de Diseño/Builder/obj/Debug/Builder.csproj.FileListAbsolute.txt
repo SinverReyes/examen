@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\Builder\bin\Debug\Builder.exe.config
+C:\Users\sinver.reyes\source\repos\Builder\bin\Debug\Builder.exe
+C:\Users\sinver.reyes\source\repos\Builder\bin\Debug\Builder.pdb
+C:\Users\sinver.reyes\source\repos\Builder\obj\Debug\Builder.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\Builder\obj\Debug\Builder.exe
+C:\Users\sinver.reyes\source\repos\Builder\obj\Debug\Builder.pdb
