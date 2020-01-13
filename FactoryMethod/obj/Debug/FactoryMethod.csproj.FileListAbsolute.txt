@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\FactoryMethod\bin\Debug\FactoryMethod.exe.config
+C:\Users\sinver.reyes\source\repos\FactoryMethod\bin\Debug\FactoryMethod.exe
+C:\Users\sinver.reyes\source\repos\FactoryMethod\bin\Debug\FactoryMethod.pdb
+C:\Users\sinver.reyes\source\repos\FactoryMethod\obj\Debug\FactoryMethod.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\FactoryMethod\obj\Debug\FactoryMethod.exe
+C:\Users\sinver.reyes\source\repos\FactoryMethod\obj\Debug\FactoryMethod.pdb
