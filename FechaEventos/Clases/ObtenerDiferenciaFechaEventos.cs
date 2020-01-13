@@ -7,27 +7,33 @@ namespace FechaEventos.Clases
 {
     public class ObtenerDiferenciaFechaEventos
     {
+        private IArchivos nuevoArchivo;
+
+        public ObtenerDiferenciaFechaEventos(IArchivos nuevoArchivo)
+        {
+            this.nuevoArchivo = nuevoArchivo;
+        }
+
         public void ObtenerEventosPasadosFuturos()
         {
-            IArchivos archivos = new ObtenerInfoArchivoTXT();
 
-            string cRutaArchivo = archivos.ObtenerRutaArchivo();
+            string cRutaArchivo = nuevoArchivo.ObtenerRutaArchivo();
 
-            var lstEventos = archivos.LeerArchivo(cRutaArchivo);
+            var lstEventos = nuevoArchivo.LeerArchivo(cRutaArchivo);
 
             Calculardiferencia(lstEventos);
 
             VolveraIniciar();
         }
 
-        private static DateTime FechaBase()
+        private DateTime FechaBase()
         {
             DateTime _FechaBase = DateTime.Now;
 
             return _FechaBase;
         }
 
-        private static string EventoHaPasado(TimeSpan _interval)
+        private string EventoHaPasado(TimeSpan _interval)
         {
 
             string EventoYaOcurrio = _interval.ToString().Substring(0, 1);
@@ -37,7 +43,7 @@ namespace FechaEventos.Clases
             return EventoYaOcurrio;
         }
 
-        private static void Calculardiferencia(List<Evento> _lstEventos)
+        private void Calculardiferencia(List<Evento> _lstEventos)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
         {
             IImprimirEvento  ImprimirMensajeEvento = new ImprimirEvento();
             DateTime dtFechaEstatica = FechaBase();
@@ -65,7 +71,7 @@ namespace FechaEventos.Clases
             }
         }
 
-        private static string ObtenerPeriodoTiempo(int _meses, int _Dias, int _Hrs, int _Min)
+        private string ObtenerPeriodoTiempo(int _meses, int _Dias, int _Hrs, int _Min)
         {
             string cPeriodoTiempo = "";
 

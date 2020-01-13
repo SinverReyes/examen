@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D66D6A29-67DA-46D9-A630-0CC043F055D7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Aplicacion_Eventos_3</RootNamespace>
+    <AssemblyName>Aplicacion_Eventos_3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\CompararDosFechas.cs" />
+    <Compile Include="Clases\EventoOcurrido.cs" />
+    <Compile Include="Clases\FechaBase.cs" />
+    <Compile Include="Clases\FinalizarPrograma.cs" />
+    <Compile Include="Clases\ImprimirMensajeEvento.cs" />
+    <Compile Include="Clases\ImprimirMensajeSimple.cs" />
+    <Compile Include="Clases\LeerConsola.cs" />
+    <Compile Include="Clases\LimpiarConsola.cs" />
+    <Compile Include="Clases\ObtenerDiferenciaFechas.cs" />
+    <Compile Include="Clases\ObtenerInfoArchivo.cs" />
+    <Compile Include="Clases\ValidarFecha.cs" />
+    <Compile Include="Clases\ValidaRutaArchivo.cs" />
+    <Compile Include="Controladores\ObtenerDiferenciaFechaEvento.cs" />
+    <Compile Include="DTO\Eventos.cs" />
+    <Compile Include="Interfaces\ICompararDosFechas.cs" />
+    <Compile Include="Interfaces\IEventoOcurrido.cs" />
+    <Compile Include="Interfaces\IFechaBase.cs" />
+    <Compile Include="Interfaces\IFinalizarPrograma.cs" />
+    <Compile Include="Interfaces\IImprimirMensajeEvento.cs" />
+    <Compile Include="Interfaces\ILimpiarConsola.cs" />
+    <Compile Include="Interfaces\IObtenerDiferenciaFechas.cs" />
+    <Compile Include="Interfaces\IImprimirMensajeSimple.cs" />
+    <Compile Include="Interfaces\ILeerConsola.cs" />
+    <Compile Include="Interfaces\IObtenerInfoArchivo.cs" />
+    <Compile Include="Interfaces\IValidarFecha.cs" />
+    <Compile Include="Interfaces\IValidaRutaArchivo.cs" />
+    <Compile Include="Interfaces\IReiniciarProgram.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FechaEventos.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

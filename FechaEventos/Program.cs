@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using TiempoEventos;
 using FechaEventos.Clases;
+using FechaEventos.Interfaces;
 
 namespace FechaEventos
 {
-    public class Program : ObtenerDiferenciaFechaEventos
+    public class Program
     {
         public static void Main(string[] args)
         {
-            ObtenerDiferenciaFechaEventos nuevo = new ObtenerDiferenciaFechaEventos();
+            IImprimirSimple nuevoimprime = new ImprimirSimple();
+            IArchivos nuevoArchivo = new ObtenerInfoArchivoTXT(nuevoimprime);
+            ObtenerDiferenciaFechaEventos nuevo = new ObtenerDiferenciaFechaEventos(nuevoArchivo);
 
             nuevo.ObtenerEventosPasadosFuturos();
         }
