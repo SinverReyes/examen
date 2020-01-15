@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\State\bin\Debug\State.exe.config
+C:\Users\sinver.reyes\source\repos\State\bin\Debug\State.exe
+C:\Users\sinver.reyes\source\repos\State\bin\Debug\State.pdb
+C:\Users\sinver.reyes\source\repos\State\obj\Debug\State.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\State\obj\Debug\State.exe
+C:\Users\sinver.reyes\source\repos\State\obj\Debug\State.pdb

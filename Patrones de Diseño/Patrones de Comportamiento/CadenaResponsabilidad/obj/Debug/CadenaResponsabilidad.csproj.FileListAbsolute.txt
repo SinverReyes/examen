@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\CadenaResponsabilidad\bin\Debug\CadenaResponsabilidad.exe.config
+C:\Users\sinver.reyes\source\repos\CadenaResponsabilidad\bin\Debug\CadenaResponsabilidad.exe
+C:\Users\sinver.reyes\source\repos\CadenaResponsabilidad\bin\Debug\CadenaResponsabilidad.pdb
+C:\Users\sinver.reyes\source\repos\CadenaResponsabilidad\obj\Debug\CadenaResponsabilidad.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\CadenaResponsabilidad\obj\Debug\CadenaResponsabilidad.exe
+C:\Users\sinver.reyes\source\repos\CadenaResponsabilidad\obj\Debug\CadenaResponsabilidad.pdb

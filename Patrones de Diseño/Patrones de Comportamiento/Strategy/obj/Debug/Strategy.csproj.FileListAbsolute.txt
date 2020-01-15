@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\Strategy\bin\Debug\Strategy.exe.config
+C:\Users\sinver.reyes\source\repos\Strategy\bin\Debug\Strategy.exe
+C:\Users\sinver.reyes\source\repos\Strategy\bin\Debug\Strategy.pdb
+C:\Users\sinver.reyes\source\repos\Strategy\obj\Debug\Strategy.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\Strategy\obj\Debug\Strategy.exe
+C:\Users\sinver.reyes\source\repos\Strategy\obj\Debug\Strategy.pdb
