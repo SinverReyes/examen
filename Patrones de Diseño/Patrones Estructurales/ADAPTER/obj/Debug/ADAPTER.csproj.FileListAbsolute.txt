@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\ADAPTER\bin\Debug\ADAPTER.exe.config
+C:\Users\sinver.reyes\source\repos\ADAPTER\bin\Debug\ADAPTER.exe
+C:\Users\sinver.reyes\source\repos\ADAPTER\bin\Debug\ADAPTER.pdb
+C:\Users\sinver.reyes\source\repos\ADAPTER\obj\Debug\ADAPTER.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\ADAPTER\obj\Debug\ADAPTER.exe
+C:\Users\sinver.reyes\source\repos\ADAPTER\obj\Debug\ADAPTER.pdb
