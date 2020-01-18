@@ -133,7 +133,7 @@ namespace CommandPractice
         public static void reimprimirMenuAcciones(string mensaje)
         {
             
-            print("\nFelicidades, ahora puedes " + mensaje + "\nRecargarndo menú. . . ");
+            print("\nFelicidades, ahora puedes " + mensaje + "\nRecargando menú. . . ");
             Thread.Sleep(3000);
             Console.Clear();
             MenuPrincipal();

@@ -15,12 +15,12 @@ namespace CommandPractice
         {
             switch (_iAccion)
             {
-                case 1: invoker.SetCaminar(new AccionCaminar(receiver, _iAccion, _cNombre));  break;
-                case 2: invoker.SetSaltar(new AccionSaltar(receiver, _iAccion, _cNombre));  break;
-                case 3: invoker.SetGolpear(new AccionGolpear(receiver, _iAccion, _cNombre));  break;
-                case 4: invoker.SetDispararPistola(new AccionDispararPistola(receiver, _iAccion, _cNombre));  break;
-                case 5: invoker.SetLanzarGranada(new AccionLanzarGranada(receiver, _iAccion, _cNombre));  break;
-                case 6: invoker.SetDispararRiflePlasma(new AccionDispararRiflePlasma(receiver, _iAccion, _cNombre));  break;
+                case 1: invoker.SetCaminar(new AccionCaminar(receiver, _iGuerrero, _cNombre));  break;
+                case 2: invoker.SetSaltar(new AccionSaltar(receiver, _iGuerrero, _cNombre));  break;
+                case 3: invoker.SetGolpear(new AccionGolpear(receiver, _iGuerrero, _cNombre));  break;
+                case 4: invoker.SetDispararPistola(new AccionDispararPistola(receiver, _iGuerrero, _cNombre));  break;
+                case 5: invoker.SetLanzarGranada(new AccionLanzarGranada(receiver, _iGuerrero, _cNombre));  break;
+                case 6: invoker.SetDispararRiflePlasma(new AccionDispararRiflePlasma(receiver, _iGuerrero, _cNombre));  break;
             }
 
             invoker.EjecutarAccion();
