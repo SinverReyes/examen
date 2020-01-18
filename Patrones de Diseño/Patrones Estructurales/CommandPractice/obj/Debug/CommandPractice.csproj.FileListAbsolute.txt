@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\CommandPractice\bin\Debug\CommandPractice.exe.config
+C:\Users\sinver.reyes\source\repos\CommandPractice\bin\Debug\CommandPractice.exe
+C:\Users\sinver.reyes\source\repos\CommandPractice\bin\Debug\CommandPractice.pdb
+C:\Users\sinver.reyes\source\repos\CommandPractice\obj\Debug\CommandPractice.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\CommandPractice\obj\Debug\CommandPractice.exe
+C:\Users\sinver.reyes\source\repos\CommandPractice\obj\Debug\CommandPractice.pdb
