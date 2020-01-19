@@ -1,0 +1,6 @@
+C:\my\Proxy\Proxy\obj\Debug\Proxy.csprojAssemblyReference.cache
+C:\my\Proxy\Proxy\bin\Debug\Proxy.exe.config
+C:\my\Proxy\Proxy\bin\Debug\Proxy.exe
+C:\my\Proxy\Proxy\bin\Debug\Proxy.pdb
+C:\my\Proxy\Proxy\obj\Debug\Proxy.exe
+C:\my\Proxy\Proxy\obj\Debug\Proxy.pdb
