@@ -1,0 +1,6 @@
+C:\Users\sinver.reyes\source\repos\Decorador\bin\Debug\Decorador.exe.config
+C:\Users\sinver.reyes\source\repos\Decorador\bin\Debug\Decorador.exe
+C:\Users\sinver.reyes\source\repos\Decorador\bin\Debug\Decorador.pdb
+C:\Users\sinver.reyes\source\repos\Decorador\obj\Debug\Decorador.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\Decorador\obj\Debug\Decorador.exe
+C:\Users\sinver.reyes\source\repos\Decorador\obj\Debug\Decorador.pdb
