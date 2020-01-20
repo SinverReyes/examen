@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ADAPTER
 {
@@ -6,9 +7,16 @@ namespace ADAPTER
     {
         static void Main(string[] args)
         {
-            AdaptadorStringDouble adapter = new AdaptadorStringDouble(new TotalString());
+            AdaptadorJsonEntidad adapterd = new AdaptadorJsonEntidad(new SucursalJson());
 
-            Console.WriteLine(adapter.ObtenerValorTotalDouble());
+            List<Sucursal> lstSucursal = adapterd.ObtenerSucursalEntidad();
+
+            Console.WriteLine("Sucursales");
+
+            foreach (var lstFinal in lstSucursal)
+            {
+                Console.WriteLine("\n"+lstFinal.IdSucursal+"   "+ lstFinal.cNombreSucursal+ "   " +lstFinal.TotalVentas);
+            }
 
             Console.ReadKey();
 

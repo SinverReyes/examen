@@ -4,3 +4,18 @@ C:\Users\sinver.reyes\source\repos\ADAPTER\bin\Debug\ADAPTER.pdb
 C:\Users\sinver.reyes\source\repos\ADAPTER\obj\Debug\ADAPTER.csprojAssemblyReference.cache
 C:\Users\sinver.reyes\source\repos\ADAPTER\obj\Debug\ADAPTER.exe
 C:\Users\sinver.reyes\source\repos\ADAPTER\obj\Debug\ADAPTER.pdb
+C:\Users\sinver.reyes\source\repos\Patrones estructurales\ADAPTER\bin\Debug\ADAPTER.exe.config
+C:\Users\sinver.reyes\source\repos\Patrones estructurales\ADAPTER\bin\Debug\ADAPTER.exe
+C:\Users\sinver.reyes\source\repos\Patrones estructurales\ADAPTER\bin\Debug\ADAPTER.pdb
+C:\Users\sinver.reyes\source\repos\Patrones estructurales\ADAPTER\obj\Debug\ADAPTER.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\source\repos\Patrones estructurales\ADAPTER\obj\Debug\ADAPTER.exe
+C:\Users\sinver.reyes\source\repos\Patrones estructurales\ADAPTER\obj\Debug\ADAPTER.pdb
+C:\my\ADAPTER\bin\Debug\ADAPTER.exe.config
+C:\my\ADAPTER\bin\Debug\ADAPTER.exe
+C:\my\ADAPTER\bin\Debug\ADAPTER.pdb
+C:\my\ADAPTER\obj\Debug\ADAPTER.csprojAssemblyReference.cache
+C:\my\ADAPTER\obj\Debug\ADAPTER.exe
+C:\my\ADAPTER\obj\Debug\ADAPTER.pdb
+C:\my\ADAPTER\bin\Debug\Newtonsoft.Json.dll
+C:\my\ADAPTER\bin\Debug\Newtonsoft.Json.xml
+C:\my\ADAPTER\obj\Debug\ADAPTER.csproj.CopyComplete
