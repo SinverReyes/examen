@@ -4,3 +4,9 @@ C:\Users\sinver.reyes\source\repos\Aplicacion_Eventos_3\bin\Debug\Aplicacion_Eve
 C:\Users\sinver.reyes\source\repos\Aplicacion_Eventos_3\obj\Debug\AplicacionEventos3.csprojAssemblyReference.cache
 C:\Users\sinver.reyes\source\repos\Aplicacion_Eventos_3\obj\Debug\Aplicacion_Eventos_3.exe
 C:\Users\sinver.reyes\source\repos\Aplicacion_Eventos_3\obj\Debug\Aplicacion_Eventos_3.pdb
+C:\Users\sinver.reyes\Documents\GitHub\examen\Version 3\Aplicacion_Eventos_3\bin\Debug\Aplicacion_Eventos_3.exe.config
+C:\Users\sinver.reyes\Documents\GitHub\examen\Version 3\Aplicacion_Eventos_3\bin\Debug\Aplicacion_Eventos_3.exe
+C:\Users\sinver.reyes\Documents\GitHub\examen\Version 3\Aplicacion_Eventos_3\bin\Debug\Aplicacion_Eventos_3.pdb
+C:\Users\sinver.reyes\Documents\GitHub\examen\Version 3\Aplicacion_Eventos_3\obj\Debug\AplicacionEventos3.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\Documents\GitHub\examen\Version 3\Aplicacion_Eventos_3\obj\Debug\Aplicacion_Eventos_3.exe
+C:\Users\sinver.reyes\Documents\GitHub\examen\Version 3\Aplicacion_Eventos_3\obj\Debug\Aplicacion_Eventos_3.pdb

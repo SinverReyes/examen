@@ -40,7 +40,7 @@ namespace Aplicacion_Eventos_3.Controladores
             catch (Exception e)
             {
                 throw new Exception(e.Message);
-            }
+            } 
 
         }
 
