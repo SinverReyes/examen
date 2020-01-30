@@ -9,15 +9,22 @@ namespace ProyectoFinal
     public class ConcreteTren : ITransporte
     {
         private int iCostoEnvioxKm = 5;
+        private int iVelocidadEntrega = 80;
 
         public string ObtenerCostoEnvio(double _MargenUtilidad, double _dDistancia)
         {
-            return "Camión: The resultado de enviar el paquete es de $100 pesos.\n";
+            double dCostoTotal = (iCostoEnvioxKm * _dDistancia * (1 + (_MargenUtilidad / 100)));
+
+            string cResultado = dCostoTotal + " pesos";
+
+            return cResultado;
         }
 
-        public double obtenerTiempoEntregaEnDias(double _dDistancia)
+        public double obtenerTiempoEntrega(double _dDistancia)
         {
-            throw new NotImplementedException();
+            double dHoras = (_dDistancia / iVelocidadEntrega);
+
+            return dHoras;
         }
     }
 }

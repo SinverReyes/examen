@@ -8,9 +8,36 @@ namespace ProyectoFinal
 {
     public class PaqueteriaFedex : IPaqueteria
     {
+        private PuentePaqueteriaTransporte puentePaqueteriaTransporte;
+        private double dMargenUtilidad = 50;
+        private Dictionary<int, string> DicTransportes = new Dictionary<int, string>()
+        {
+            { 1, "Tren" },
+            { 2, "Barco" },
+            { 3, "Avion" }
+        };
+
         public string obtenerCostoxPaqueteria(string transporte, double _dDistancia)
         {
-            throw new NotImplementedException();
+            ValidarTransporte(transporte);
+
+            string cMensaje = puentePaqueteriaTransporte.ObtenerCostoEnvio(dMargenUtilidad, _dDistancia);
+
+            return cMensaje;
+        }
+
+        private void ValidarTransporte(string _cTransporte)
+        {
+            bool existe = DicTransportes.ContainsValue(_cTransporte);
+            string cRespuesta = string.Empty;
+
+            if (!existe)
+            {
+                throw new Exception($"DHL no ofrece el servicio por {_cTransporte}, te recomendamos cotizar en otra empreza");
+            }
+
+            puentePaqueteriaTransporte = new TransporteBusiness().obtenerTransporte(_cTransporte);
+
         }
     }
 }

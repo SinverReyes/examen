@@ -10,6 +10,6 @@ namespace ProyectoFinal
     {
         string ObtenerCostoEnvio(double _MargenUtilidad, double _dDistancia);
 
-        double obtenerTiempoEntregaEnDias(double _dDistancia);
+        double obtenerTiempoEntrega(double _dDistancia);
     }
 }

@@ -13,7 +13,6 @@ namespace ProyectoFinal
         {
             string cRuta = @"C:\Users\sinver.reyes\source\repos\ProyectoFinal\BaseDatos.txt";
             List<DatosPedidoDTO> lstdatos = new List<DatosPedidoDTO>();
-            DatosPedidoDTO datos = new DatosPedidoDTO();
 
             try
             {
@@ -23,13 +22,15 @@ namespace ProyectoFinal
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        datos.cLugarOrigen = line.Split(',')[0];
-                        datos.cLugarDestino = line.Split(',')[1];
-                        datos.dDistancia = double.Parse(line.Split(',')[2]);
-                        datos.cPaqueteria = line.Split(',')[3];
-                        datos.cTransporte = line.Split(',')[4];
-                        datos.dtFechaPedido = DateTime.Parse(line.Split(',')[5]);
-                        lstdatos.Add(datos);
+                        lstdatos.Add(new DatosPedidoDTO
+                        {
+                            cLugarOrigen = line.Split(',')[0],
+                            cLugarDestino = line.Split(',')[1],
+                            dDistancia = double.Parse(line.Split(',')[2]),
+                            cPaqueteria = line.Split(',')[3],
+                            cTransporte = line.Split(',')[4],
+                            dtFechaPedido = DateTime.Parse(line.Split(',')[5])
+                        });
                     }
 
                     return lstdatos;

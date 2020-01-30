@@ -32,7 +32,8 @@ namespace ProyectoFinal
 
         private string ObtenerMensajeDiferenciaHoras(int _iDiferenciaHoras)
         {
-            string cMensaje = _iDiferenciaHoras > 0 ? " dentro de " : " hace ";
+            string cMensaje = _iDiferenciaHoras > 0 ? "+," : "-,";
+
             int iAbsoluteValor = Math.Abs(_iDiferenciaHoras);
 
             switch (iAbsoluteValor)

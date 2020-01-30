@@ -8,33 +8,43 @@ namespace ProyectoFinal
 {
     class Program
     {
-        static readonly string cMensaje = "Tu paquete {0} de {1} y {2} a {3} {4} y {5} un costo de ${6} pesos. (Cualquier reclamo con {7})";
         static void Main(string[] args)
         {
             Console.Title = "Ali Express";
-
             List<DatosPedidoDTO> datos = new Service().ObtenerPedidos();
-            //List<ExpresionesDTO> Expresiones;
 
             foreach (var lista in datos)
             {
-                #region "variables para calcular el costo"                
-                double dDistancia = lista.dDistancia;
-                string cTransporte = lista.cTransporte;
-                string cPaqueteria = lista.cPaqueteria;
-                DateTime dtFechaPedido = lista.dtFechaPedido;
-                #endregion
+                try
+                {
 
-                DateTime dtFechaEntrega = DateTime.Parse("25/12/2019");
-                string DiferenciaFechas = new Service().ObtenerDiferenciaFechas(dtFechaEntrega, DateTime.Now);
-                string costoPaqueteria = new Service().ObtenerCostoPedido(dDistancia, cTransporte, cPaqueteria);
+                    #region "variables para calcular el costo"      
+                    DateTime FechaHoy = DateTime.Now;
+                    double dDistancia = lista.dDistancia;
+                    string cTransporte = lista.cTransporte;
+                    string cPaqueteria = lista.cPaqueteria;
+                    DateTime dtFechaPedido = lista.dtFechaPedido;
+                    #endregion
 
-                Console.WriteLine(cMensaje, "salio", "NewYork", "llegará", "Yucatán", DiferenciaFechas, "tendra", costoPaqueteria, "DHL");
+                    double HorasParaEntregarPaquete = new Service().obtenerTiempoEntregaxTransporte(cTransporte, dDistancia);
+                    dtFechaPedido.AddDays(HorasParaEntregarPaquete);
 
+                    string FechaEntrega = new Service().ObtenerDiferenciaFechas(dtFechaPedido, FechaHoy);
+                    //Indica si el paquete a sido entregado
+                    lista.PaqueteEntregado = (FechaEntrega.Split(',')[0] == "+") ? true : false;
+                    //Indica el tiempo en el que se entregará el paquete o hace cuando fue entregado
+                    lista.cTiempoEntrega = FechaEntrega.Split(',')[1];
+                    //Indica cuanto costo el envio del paquete
+                    lista.cCostoEnvio = new Service().ObtenerCostoPedido(dDistancia, cTransporte, cPaqueteria);
+
+                }
+                catch (Exception e)
+                {
+                    new Service().PrintError(e.Message);
+                }
             }
 
-            //new Service().PrintResultado(Expresiones);
-
+            new Service().PrintResultado(datos);
 
             Console.ReadKey();
         }

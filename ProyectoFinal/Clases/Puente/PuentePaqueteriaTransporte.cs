@@ -20,9 +20,9 @@ namespace ProyectoFinal
             return Transporte.ObtenerCostoEnvio(_MargenUtilidad, _dDistancia);
         }
 
-        public virtual double obtenerTiempoEntregaEnDias(double _dDistancia)
+        public virtual double obtenerTiempoEntrega(double _dDistancia)
         {
-            return Transporte.obtenerTiempoEntregaEnDias(_dDistancia);
+            return Transporte.obtenerTiempoEntrega(_dDistancia);
         }
     }
 }

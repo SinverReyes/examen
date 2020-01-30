@@ -13,25 +13,19 @@ namespace ProyectoFinal
 
         public string ObtenerCostoEnvio(double _MargenUtilidad, double _dDistancia)
         {
-            double dCostoTotal = ObtenerCosto(_MargenUtilidad, _dDistancia);
+            double dCostoTotal = (iCostoEnvioxKm * _dDistancia * (1 + (_MargenUtilidad / 100)));
 
-            string cResultado = dCostoTotal + " pesos.";
+            string cResultado = dCostoTotal + " pesos";
 
             return cResultado;
         }
 
-        public double obtenerTiempoEntregaEnDias(double _dDistancia)
+        public double obtenerTiempoEntrega(double _dDistancia)
         {
-            double dDias = ((_dDistancia / iVelocidadEntrega) / 24);
+            double dHoras = (_dDistancia / iVelocidadEntrega);
 
-            return dDias;
+            return dHoras;
         }
 
-        private double ObtenerCosto(double _MargenUtilidad, double _dDistancia)
-        {
-            double dCostoTotalEnvio = (iCostoEnvioxKm * _dDistancia * (1 + (_MargenUtilidad / 100)));
-
-            return dCostoTotalEnvio;
-        }
     }
 }

@@ -14,5 +14,9 @@ namespace ProyectoFinal
         public string cTransporte { set; get; }
         public double dDistancia { set; get; }
         public DateTime dtFechaPedido { set; get; }
+
+        public string cCostoEnvio { set; get; }
+        public string cTiempoEntrega { set; get; }
+        public bool PaqueteEntregado { set; get; }
     }
 }

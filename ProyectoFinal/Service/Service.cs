@@ -15,14 +15,30 @@ namespace ProyectoFinal
             return new PaqueteriaBussines().ElegirPaqueteria(_cPaqueteria, _cTransporte, _dDistancia);
         }
 
+        public double obtenerTiempoEntregaxTransporte(string _cTransporte, double _dDistancia)
+        {
+            return new TransporteBusiness().obtenerTiempoEntregaxTransporte(_cTransporte, _dDistancia);
+        }
+
         public List<DatosPedidoDTO> ObtenerPedidos()
         {
             return new DatosArchivoBusiness().ObtenerDatosArchivo();
         }
 
-        public List<ExpresionesDTO> PrintResultado(List<ExpresionesDTO> Expresiones)
+        public void PrintResultado(List<DatosPedidoDTO> _DatosPedido)
         {
-            return Expresiones;
+            new MensajesBusiness().PrintMsgPedido(_DatosPedido);
         }
+
+        public void PrintError(string _cMensaje)
+        {
+            new MensajesBusiness().PrintColorMsg("ROJO", _cMensaje);
+        }
+
+        public void Print(string _cMensaje)
+        {
+            new MensajesBusiness().PrintColorMsg("", _cMensaje);
+        }
+
     }
 }

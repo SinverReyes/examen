@@ -25,14 +25,13 @@ namespace ProyectoFinal
             }
             else
             {
-                return " justo ahora";
-
+                return "+,justo ahora";
             }
         }
 
         private string ObtenerMensajeDiferenciaMinutos(int _iDiferenciaMinutos)
         {
-            string cMensaje = _iDiferenciaMinutos > 0 ? " dentro de " : " hace ";
+            string cMensaje = _iDiferenciaMinutos > 0 ? "+," : "-,";
             int iAbsoluteValor = Math.Abs(_iDiferenciaMinutos);
 
             switch (iAbsoluteValor)

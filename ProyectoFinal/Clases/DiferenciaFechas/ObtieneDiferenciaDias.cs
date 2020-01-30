@@ -32,7 +32,8 @@ namespace ProyectoFinal
 
         private string ObtenerMensajeDiferenciaDias(int _iDiferenciaDias)
         {
-            string cMensaje = _iDiferenciaDias > 0 ? " dentro de " : " hace ";
+            string cMensaje = _iDiferenciaDias > 0 ? "+," : "-,";
+
             int iAbsoluteValor = Math.Abs(_iDiferenciaDias);
 
             switch (iAbsoluteValor)

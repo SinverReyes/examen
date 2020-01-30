@@ -10,47 +10,32 @@ namespace ProyectoFinal
     {
         private PuentePaqueteriaTransporte puentePaqueteriaTransporte;
         private double dMargenUtilidad = 40;
+        private Dictionary<int, string> DicTransportes = new Dictionary<int, string>()
+        {
+            { 1, "Tren" },
+            { 2, "Barco" },
+            { 3, "Avion" }
+        };
 
         public string obtenerCostoxPaqueteria(string transporte, double _dDistancia)
         {
-            string cMensaje;
+            ValidarTransporte(transporte);
 
-            obtenerTransporte(transporte);
-
-            cMensaje = puentePaqueteriaTransporte.ObtenerCostoEnvio(dMargenUtilidad, _dDistancia);
+            string cMensaje = puentePaqueteriaTransporte.ObtenerCostoEnvio(dMargenUtilidad, _dDistancia);
 
             return cMensaje;
         }
 
-        public double ObtenerTiempoEntregaEnDias(string transporte, double _dDistancia)
+        private void ValidarTransporte(string _cTransporte)
         {
-            double dias;
+            bool existe = DicTransportes.ContainsValue(_cTransporte);
 
-            obtenerTransporte(transporte);
-
-            dias = puentePaqueteriaTransporte.obtenerTiempoEntregaEnDias(_dDistancia);
-
-            return dias;
-        }
-
-        public void obtenerTransporte(string _cTransporteMayuscula)
-        {
-            string cTransporteMayuscula = _cTransporteMayuscula.ToUpper();
-
-            switch (cTransporteMayuscula)
+            if (!existe)
             {
-                case "BARCO":
-                    puentePaqueteriaTransporte = new PuentePaqueteriaTransporte(new ConcreteBarco());
-                    break;
-                case "TREN":
-                    puentePaqueteriaTransporte = new PuentePaqueteriaTransporte(new ConcreteTren());
-                    break;
-                case "AVION":
-                    puentePaqueteriaTransporte = new PuentePaqueteriaTransporte(new ConcreteAvion());
-                    break;
-                default:
-                    throw new Exception("La paqueteria no cuenta con envios por " + _cTransporteMayuscula);
+                throw new Exception($"DHL no ofrece el servicio por {_cTransporte}, te recomendamos cotizar en otra empreza");
             }
+
+            puentePaqueteriaTransporte = new TransporteBusiness().obtenerTransporte(_cTransporte);
         }
     }
 }

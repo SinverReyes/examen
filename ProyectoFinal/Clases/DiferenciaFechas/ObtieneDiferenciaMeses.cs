@@ -32,7 +32,9 @@ namespace ProyectoFinal
 
         private string ObtenerMensajeDiferenciaMeses(int _iDiferenciaMeses)
         {
-            string cMensaje = _iDiferenciaMeses > 0 ? " dentro de ": " hace ";
+            //string cMensaje = _iDiferenciaMeses > 0 ? " dentro de ": " hace ";
+            string cMensaje = _iDiferenciaMeses > 0 ? "+,": "-,";
+
             int iAbsoluteValor = Math.Abs(_iDiferenciaMeses);
 
             switch (iAbsoluteValor)
