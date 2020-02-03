@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
@@ -10,9 +6,9 @@ namespace ProyectoFinal
     {
         private TimeSpan DiferenciaMeses;
 
-        public ObtieneDiferenciaMeses(DateTime _dtFechaBase, DateTime _dtFechaComparar)
+        public ObtieneDiferenciaMeses(DateTime _dtFechaEntrega, DateTime _dtFechaActual)
         {
-            DiferenciaMeses = _dtFechaBase - _dtFechaComparar;
+            DiferenciaMeses = _dtFechaEntrega - _dtFechaActual;
         }
 
         public override string ObtenerDiferenciaFechas()
@@ -26,14 +22,12 @@ namespace ProyectoFinal
             else
             {
                 return base.ObtenerDiferenciaFechas();
-
             }
         }
 
         private string ObtenerMensajeDiferenciaMeses(int _iDiferenciaMeses)
         {
-            //string cMensaje = _iDiferenciaMeses > 0 ? " dentro de ": " hace ";
-            string cMensaje = _iDiferenciaMeses > 0 ? "+,": "-,";
+            string cMensaje = _iDiferenciaMeses > 0 ? "+," : "-,";
 
             int iAbsoluteValor = Math.Abs(_iDiferenciaMeses);
 

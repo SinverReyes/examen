@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
@@ -10,9 +6,10 @@ namespace ProyectoFinal
     {
         private TimeSpan DiferenciaHoras;
 
-        public ObtieneDiferenciaHoras(DateTime _dtFechaBase, DateTime _dtFechaComparar)
+        public ObtieneDiferenciaHoras(DateTime _dtFechaEntrega, DateTime _dtFechaActual)
         {
-            DiferenciaHoras = _dtFechaBase - _dtFechaComparar;
+            //DiferenciaHoras = _dtFechaActual - _dtFechaEntrega;
+            DiferenciaHoras = _dtFechaEntrega - _dtFechaActual;
         }
 
         public override string ObtenerDiferenciaFechas()

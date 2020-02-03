@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace ProyectoFinal
 {
     public class TransporteBusiness
     {
         private PuentePaqueteriaTransporte puenteTransporte;
 
-        public PuentePaqueteriaTransporte obtenerTransporte(string _cTransporte)
+        public PuentePaqueteriaTransporte ObtenerTransporte(string _cTransporte)
         {
             string cTransporteMayuscula = _cTransporte.ToUpper();
 
@@ -25,18 +20,16 @@ namespace ProyectoFinal
                 case "AVION":
                     puenteTransporte = new PuentePaqueteriaTransporte(new ConcreteAvion());
                     break;
-                default:
-                    throw new Exception("La paqueteria no cuenta con envios por " + _cTransporte);
             }
 
             return puenteTransporte;
         }
 
-        public double obtenerTiempoEntregaxTransporte(string _cTransporte, double _dDistancia)
+        public double ObtenerTiempoEntregaxTransporte(string _cTransporte, double _dDistancia)
         {
-            puenteTransporte = obtenerTransporte(_cTransporte);
+            puenteTransporte = ObtenerTransporte(_cTransporte);
 
-            double dTiempoEntrega = puenteTransporte.obtenerTiempoEntrega(_dDistancia);
+            double dTiempoEntrega = puenteTransporte.ObtenerTiempoEntrega(_dDistancia);
 
             return dTiempoEntrega;
         }

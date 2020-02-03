@@ -1,5 +1,7 @@
-Ticul,Motul,80,Estafeta,Tren,23-01-2020 12:00:00
+Ticul,Motul,80,Estafeta,Tren,08-02-2020 12:00:00
 China,Cancun,446400,DHL,Avion,23-01-2020 08:00:00
 Merida,Cozumel,400,DHL,Avion,23-01-2020 13:50:00
 Cozumel,Playa del Carmen,1104,DHL,Tren,21-01-2020
-Cozumel,Playa del Carmen,1104,Paquetería Patito,Tren,21-01-2020
+Cozumel,Playa del Carmen,1104,Patito,Tren,21-01-2020
+Progreso,Merida,100,fedex,barco,05-02-2020
+Progreso,Merida,100,DHL,barco,05-02-2020

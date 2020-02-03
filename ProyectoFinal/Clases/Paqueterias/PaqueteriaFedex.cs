@@ -12,31 +12,35 @@ namespace ProyectoFinal
         private double dMargenUtilidad = 50;
         private Dictionary<int, string> DicTransportes = new Dictionary<int, string>()
         {
-            { 1, "Tren" },
-            { 2, "Barco" },
-            { 3, "Avion" }
+            { 1, "BARCO"}
         };
 
-        public string obtenerCostoxPaqueteria(string transporte, double _dDistancia)
+        public double ObtenerCostoPedido(string transporte, double _dDistancia)
         {
             ValidarTransporte(transporte);
 
-            string cMensaje = puentePaqueteriaTransporte.ObtenerCostoEnvio(dMargenUtilidad, _dDistancia);
+            double dCosto = puentePaqueteriaTransporte.ObtenerCostoEnvio(dMargenUtilidad, _dDistancia);
 
-            return cMensaje;
+            return dCosto;
+        }
+
+        public double ObtenerTiempoEntrega(double _dDistancia)
+        {
+            double dHoras = puentePaqueteriaTransporte.ObtenerTiempoEntrega(_dDistancia);
+
+            return dHoras;
         }
 
         private void ValidarTransporte(string _cTransporte)
         {
-            bool existe = DicTransportes.ContainsValue(_cTransporte);
-            string cRespuesta = string.Empty;
+            bool existe = DicTransportes.ContainsValue(_cTransporte.ToUpper());
 
             if (!existe)
             {
-                throw new Exception($"DHL no ofrece el servicio por {_cTransporte}, te recomendamos cotizar en otra empreza");
+                throw new Exception($"FEDEX no ofrece el servicio por {_cTransporte}, te recomendamos cotizar en otra empresa.");
             }
 
-            puentePaqueteriaTransporte = new TransporteBusiness().obtenerTransporte(_cTransporte);
+            puentePaqueteriaTransporte = new TransporteBusiness().ObtenerTransporte(_cTransporte);
 
         }
     }

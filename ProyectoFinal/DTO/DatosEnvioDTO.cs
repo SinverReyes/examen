@@ -1,22 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
     public class DatosPedidoDTO
     {
-        public string cLugarOrigen { set; get; }
-        public string cLugarDestino { set; get; }
-        public string cPaqueteria { set; get; }
-        public string cTransporte { set; get; }
-        public double dDistancia { set; get; }
-        public DateTime dtFechaPedido { set; get; }
+        //datos del pedido
+        public string cLugarOrigen { get; set; }
+        public string cLugarDestino { get; set; }
+        public string cPaqueteria { get; set; }
+        public string cTransporte { get; set; }
+        public double dDistancia { get; set; }
+        public DateTime dtFechaPedido { get; set; }
 
-        public string cCostoEnvio { set; get; }
-        public string cTiempoEntrega { set; get; }
-        public bool PaqueteEntregado { set; get; }
+        //Valores que se calculan con los datos del pedido
+        public double cCostoEnvio { get; set; }
+        public string cTiempoEntrega { get; set; }
+        public bool PaqueteEntregado { get; set; }
+
+        //Indica si se produjo un error con este pedido 
+        public string cError { get; set; }
+
+        //Indica si existe una paqueteria con el mismo servicio pero mas barato
+        public string cEnvioBarato { get; set; }
     }
 }

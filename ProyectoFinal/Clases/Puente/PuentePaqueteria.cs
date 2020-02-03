@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace ProyectoFinal
 {
     public class PuentePaqueteria
@@ -14,9 +9,14 @@ namespace ProyectoFinal
         {
             Paqueteria = _paqueteria;
         }
-        public virtual string Operation(string _transporte, double _dDistancia)
+        public virtual double ObtenerCostoPedido(string _transporte, double _dDistancia)
         {
-            return Paqueteria.obtenerCostoxPaqueteria(_transporte, _dDistancia);
+            return Paqueteria.ObtenerCostoPedido(_transporte, _dDistancia);
+        }
+
+        public virtual double ObtenerTiempoEntrega(string _transporte, double _dDistancia)
+        {
+            return Paqueteria.ObtenerTiempoEntrega( _dDistancia);
         }
     }
 }

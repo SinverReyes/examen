@@ -47,7 +47,7 @@
     <Compile Include="Business\DatosArchivoBusiness.cs" />
     <Compile Include="Business\DiferenciaFechasBusiness.cs" />
     <Compile Include="Business\MensajesBusiness.cs" />
-    <Compile Include="Business\PaqueteriaBussines.cs" />
+    <Compile Include="Business\PaqueteriaBusiness.cs" />
     <Compile Include="Business\TransporteBusiness.cs" />
     <Compile Include="Clases\Mensajes\MensajeRojo.cs" />
     <Compile Include="Clases\Mensajes\MensajeGris.cs" />
@@ -63,9 +63,6 @@
     <Compile Include="Clases\Transportes\ConcreteBarco.cs" />
     <Compile Include="Clases\Transportes\ConcreteTren.cs" />
     <Compile Include="DTO\DatosEnvioDTO.cs" />
-    <Compile Include="DTO\ESTAFETATransporteDTO.cs" />
-    <Compile Include="DTO\FEDEXTransporteDTO.cs" />
-    <Compile Include="DTO\DHLTransporteDTO.cs" />
     <Compile Include="Interfaces\IMensajes.cs" />
     <Compile Include="Interfaces\IObtieneDiferenciaFechas.cs" />
     <Compile Include="Clases\DiferenciaFechas\ObtieneDiferenciaDias.cs" />
@@ -76,7 +73,11 @@
     <Compile Include="Interfaces\ITransporte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\Service.cs" />
+    <Compile Include="Service\DatosArchivoService.cs" />
+    <Compile Include="Service\FechasService.cs" />
+    <Compile Include="Service\MensajeService.cs" />
+    <Compile Include="Service\PaqueteriaService.cs" />
+    <Compile Include="Service\TransporteService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

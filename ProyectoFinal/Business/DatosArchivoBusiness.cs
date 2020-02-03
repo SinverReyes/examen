@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace ProyectoFinal
@@ -24,11 +21,11 @@ namespace ProyectoFinal
                     {
                         lstdatos.Add(new DatosPedidoDTO
                         {
-                            cLugarOrigen = line.Split(',')[0],
-                            cLugarDestino = line.Split(',')[1],
+                            cLugarOrigen = line.Split(',')[0].Trim(),
+                            cLugarDestino = line.Split(',')[1].Trim(),
                             dDistancia = double.Parse(line.Split(',')[2]),
-                            cPaqueteria = line.Split(',')[3],
-                            cTransporte = line.Split(',')[4],
+                            cPaqueteria = line.Split(',')[3].Trim(),
+                            cTransporte = line.Split(',')[4].Trim(),
                             dtFechaPedido = DateTime.Parse(line.Split(',')[5])
                         });
                     }
@@ -36,11 +33,10 @@ namespace ProyectoFinal
                     return lstdatos;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new Exception("No se encontró el archivo");
             }
-
         }
     }
 }

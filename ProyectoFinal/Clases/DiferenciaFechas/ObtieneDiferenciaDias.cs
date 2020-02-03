@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
@@ -10,9 +6,10 @@ namespace ProyectoFinal
     {
         private TimeSpan DiferenciaDias;
 
-        public ObtieneDiferenciaDias(DateTime _dtFechaBase, DateTime _dtFechaComparar)
+        public ObtieneDiferenciaDias(DateTime _dtFechaEntrega, DateTime _dtFechaActual)
         {
-            DiferenciaDias = _dtFechaBase - _dtFechaComparar;
+            //DiferenciaDias = _dtFechaActual - _dtFechaEntrega;
+            DiferenciaDias = _dtFechaEntrega - _dtFechaActual;
         }
 
         public override string ObtenerDiferenciaFechas()
@@ -26,7 +23,6 @@ namespace ProyectoFinal
             else
             {
                 return base.ObtenerDiferenciaFechas();
-
             }
         }
 
@@ -44,7 +40,5 @@ namespace ProyectoFinal
 
             return cMensaje;
         }
-
-
     }
 }
