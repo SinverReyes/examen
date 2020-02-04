@@ -4,3 +4,9 @@ C:\Users\sinver.reyes\source\repos\ProyectoFinal\bin\Debug\ProyectoFinal.exe
 C:\Users\sinver.reyes\source\repos\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
 C:\Users\sinver.reyes\source\repos\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 C:\Users\sinver.reyes\source\repos\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\sinver.reyes\Documents\GitHub\examen\Proyecto\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\sinver.reyes\Documents\GitHub\examen\Proyecto\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\sinver.reyes\Documents\GitHub\examen\Proyecto\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\sinver.reyes\Documents\GitHub\examen\Proyecto\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+C:\Users\sinver.reyes\Documents\GitHub\examen\Proyecto\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\sinver.reyes\Documents\GitHub\examen\Proyecto\ProyectoFinal\obj\Debug\ProyectoFinal.pdb

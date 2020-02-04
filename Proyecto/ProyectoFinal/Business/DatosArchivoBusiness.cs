@@ -8,7 +8,7 @@ namespace ProyectoFinal
     {
         public List<DatosPedidoDTO> ObtenerDatosArchivo()
         {
-            string cRuta = @"C:\Users\sinver.reyes\source\repos\ProyectoFinal\BaseDatos.txt";
+            string cRuta = @"..\..\BaseDatos.txt";
             List<DatosPedidoDTO> lstdatos = new List<DatosPedidoDTO>();
 
             try
