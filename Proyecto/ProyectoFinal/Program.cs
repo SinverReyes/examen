@@ -8,10 +8,13 @@ namespace ProyectoFinal
     {
         static void Main(string[] args)
         {
+
             Console.Title = "Ali Express";
 
+            TipoArchivo(args);
+
             VerificarEntregaPedido();
-            
+
             Console.ReadKey();
         }
 
@@ -22,7 +25,7 @@ namespace ProyectoFinal
             MensajeService msgSrv = new MensajeService(new MensajesBusiness());
             DatosArchivoService srvArchivo = new DatosArchivoService(new DatosArchivoBusiness());
             List<DatosPedidoDTO> datos = new List<DatosPedidoDTO>();
-            List<PedidosDTO> datos2 = new List<PedidosDTO>(); 
+            List<PedidosDTO> datos2 = new List<PedidosDTO>();
 
             try
             {
@@ -78,27 +81,32 @@ namespace ProyectoFinal
             }
         }
 
-        public static void TipoArchivo(string opt)
+        public static void TipoArchivo(string[] opt)
         {
-            switch (opt)
+            try
             {
-                case "cvc": break;
-                case "json": break;
+                if (opt.Length == 0)
+                {
+                    throw new Exception("Debe introducir el comando del archivo con el que vamos a trabajar");
+                }
+
+                switch (opt[2].ToUpper())
+                {
+                    case "CSV": Console.WriteLine("Iniciando . . ."); break;
+                    case "JSON": throw new Exception("Fuera de servicio . . . Estamos trabajando para solucionarlo");
+                    default: throw new Exception("No contamos con ese formato");
+                }
 
             }
-        }
-
-        private static void otro()
-        {
-            List<PaquetriasTransporteDTO> lsttransporte = new List<PaquetriasTransporteDTO>();
-            List<MediosTransporte> ls = new List<MediosTransporte>();
-            DatosArchivoService srvTransporte = new DatosArchivoService(new DatosArchivoBusiness());
-
-            lsttransporte = srvTransporte.ObtenerDatosPaqueteriaJson(lsttransporte);
-
-            foreach (var x in lsttransporte.Select(x=> x.Paqueterias))
+            catch (IndexOutOfRangeException)
             {
-                var uno = x.Select(s=> s.MargenUtilidad).First();
+                Console.WriteLine("No se reconoce ese comando");
+                Environment.Exit(-1);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Environment.Exit(-1);
             }
         }
     }
