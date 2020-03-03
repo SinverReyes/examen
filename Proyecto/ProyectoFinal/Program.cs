@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ProyectoFinal
@@ -7,10 +8,10 @@ namespace ProyectoFinal
     {
         static void Main(string[] args)
         {
-            Console.Title = "Ali Expresso";
+            Console.Title = "Ali Express";
 
             VerificarEntregaPedido();
-
+            
             Console.ReadKey();
         }
 
@@ -20,11 +21,17 @@ namespace ProyectoFinal
             FechasService srvFechas = new FechasService(new DiferenciaFechasBusiness());
             MensajeService msgSrv = new MensajeService(new MensajesBusiness());
             DatosArchivoService srvArchivo = new DatosArchivoService(new DatosArchivoBusiness());
+            List<DatosPedidoDTO> datos = new List<DatosPedidoDTO>();
+            List<PedidosDTO> datos2 = new List<PedidosDTO>(); 
 
             try
             {
+
                 //Obtiene la información del archivo
-                List<DatosPedidoDTO> datos = srvArchivo.ObtenerPedidos();
+                datos = srvArchivo.ObtenerPedidos();
+                //datos2 = srvArchivo.ObtenerDatosJSon(datos2);
+
+
 
                 //Recorre la lista de pedidos
                 foreach (var lista in datos)
@@ -68,6 +75,30 @@ namespace ProyectoFinal
             catch (Exception e)
             {
                 msgSrv.PrintError(e.Message);
+            }
+        }
+
+        public static void TipoArchivo(string opt)
+        {
+            switch (opt)
+            {
+                case "cvc": break;
+                case "json": break;
+
+            }
+        }
+
+        private static void otro()
+        {
+            List<PaquetriasTransporteDTO> lsttransporte = new List<PaquetriasTransporteDTO>();
+            List<MediosTransporte> ls = new List<MediosTransporte>();
+            DatosArchivoService srvTransporte = new DatosArchivoService(new DatosArchivoBusiness());
+
+            lsttransporte = srvTransporte.ObtenerDatosPaqueteriaJson(lsttransporte);
+
+            foreach (var x in lsttransporte.Select(x=> x.Paqueterias))
+            {
+                var uno = x.Select(s=> s.MargenUtilidad).First();
             }
         }
     }

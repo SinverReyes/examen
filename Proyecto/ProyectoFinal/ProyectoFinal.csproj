@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,9 +49,13 @@
     <Compile Include="Abstract\AbstractHanderObtieneDiferenciaFechas.cs" />
     <Compile Include="Business\DatosArchivoBusiness.cs" />
     <Compile Include="Business\DiferenciaFechasBusiness.cs" />
+    <Compile Include="Business\GeneradorArchivos.cs" />
     <Compile Include="Business\MensajesBusiness.cs" />
     <Compile Include="Business\PaqueteriaBusiness.cs" />
     <Compile Include="Business\TransporteBusiness.cs" />
+    <Compile Include="Clases\DiferenciaFechas\ObtieneDiferenciaSemanas.cs" />
+    <Compile Include="Clases\DiferenciaFechas\ObtieneDiferenciaAnios.cs" />
+    <Compile Include="Clases\DiferenciaFechas\ObtieneDiferenciaBimestres.cs" />
     <Compile Include="Clases\Mensajes\MensajeRojo.cs" />
     <Compile Include="Clases\Mensajes\MensajeGris.cs" />
     <Compile Include="Clases\Mensajes\MensajeVerde.cs" />
@@ -62,6 +69,8 @@
     <Compile Include="Clases\Transportes\ConcreteAvion.cs" />
     <Compile Include="Clases\Transportes\ConcreteBarco.cs" />
     <Compile Include="Clases\Transportes\ConcreteTren.cs" />
+    <Compile Include="DTO\PaqueteriasTransportesDTO.cs" />
+    <Compile Include="DTO\PedidosDTO.cs" />
     <Compile Include="DTO\DatosEnvioDTO.cs" />
     <Compile Include="Interfaces\IMensajes.cs" />
     <Compile Include="Interfaces\IObtieneDiferenciaFechas.cs" />
@@ -81,9 +90,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="json\Config.json" />
+    <None Include="json\Pedidos.json" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BaseDatos.txt" />
+    <Content Include="Bitacora\DHL\Entregados\mes.txt" />
+    <Content Include="Bitacora\DHL\Entregados\semanas.txt" />
+    <Content Include="Bitacora\DHL\Pendientes\meses.txt" />
+    <Content Include="Bitacora\Estafeta\Entregados\semanas.txt" />
+    <Content Include="Bitacora\fedex\Entregados\semanas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

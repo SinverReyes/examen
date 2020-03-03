@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProyectoFinal
 {
     public class PaqueteriaDHL : IPaqueteria
     {
         private PuentePaqueteriaTransporte puentePaqueteriaTransporte;
-        private double dMargenUtilidad = 40;
+        private double dMargenUtilidad;
         private Dictionary<int, string> DicTransportes = new Dictionary<int, string>()
         {
             { 1, "AVION" },
@@ -31,6 +32,7 @@ namespace ProyectoFinal
 
         private void ValidarTransporte(string _cTransporte)
         {
+                        
             bool existe = DicTransportes.ContainsValue(_cTransporte.ToUpper());
 
             if (!existe)
@@ -40,5 +42,8 @@ namespace ProyectoFinal
 
             puentePaqueteriaTransporte = new TransporteBusiness().ObtenerTransporte(_cTransporte);
         }
+
+
+
     }
 }

@@ -5,3 +5,4 @@ Cozumel,Playa del Carmen,1104,DHL,Tren,21-01-2020
 Cozumel,Playa del Carmen,1104,Patito,Tren,21-01-2020
 Progreso,Merida,100,fedex,barco,05-02-2020
 Progreso,Merida,100,DHL,barco,05-02-2020
+Progreso,Merida,100,DHL,barco,08-03-2021

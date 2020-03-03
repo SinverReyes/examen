@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -36,6 +37,46 @@ namespace ProyectoFinal
             catch (Exception)
             {
                 throw new Exception("No se encontró el archivo");
+            }
+        }
+
+        public List<PedidosDTO> ObtenerDatosJSon(List<PedidosDTO> lstDatos)
+        {
+            try
+            {
+                string path = @"..\..\json\Pedidos.json";
+
+                using (StreamReader jsonStream = File.OpenText(path))
+                {
+                    var json = jsonStream.ReadToEnd();
+                    lstDatos = JsonConvert.DeserializeObject<List<PedidosDTO>>(json);
+                }
+
+                return lstDatos;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<PaquetriasTransporteDTO> ObtenerDatosPaqueteriaJson(List<PaquetriasTransporteDTO> lstDatos)
+        {
+            try
+            {
+                string path = @"..\..\json\Config.json";
+
+                using (StreamReader jsonStream = File.OpenText(path))
+                {
+                    var json = jsonStream.ReadToEnd();
+                    lstDatos = JsonConvert.DeserializeObject<List<PaquetriasTransporteDTO>>(json);
+                }
+
+                return lstDatos;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
             }
         }
     }

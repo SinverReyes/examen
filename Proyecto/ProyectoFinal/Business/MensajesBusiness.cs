@@ -39,11 +39,11 @@ namespace ProyectoFinal
                 {
                     if (lstPedidos.PaqueteEntregado)
                     {
-                        ImprimirMsgPaqueteEntregado(lstPedidos.cLugarOrigen, lstPedidos.cLugarDestino, lstPedidos.cTiempoEntrega, lstPedidos.cCostoEnvio, lstPedidos.cPaqueteria);
+                        ImprimirMsgPaqueteEntregado(lstPedidos.cLugarOrigen, lstPedidos.cLugarDestino, lstPedidos.cTiempoEntrega, lstPedidos.cCostoEnvio, lstPedidos.cPaqueteria, new GeneradorArchivos());
                     }
                     else
                     {
-                        ImprimirMsgPaqueteEnCamino(lstPedidos.cLugarOrigen, lstPedidos.cLugarDestino, lstPedidos.cTiempoEntrega, lstPedidos.cCostoEnvio, lstPedidos.cPaqueteria);
+                        ImprimirMsgPaqueteEnCamino(lstPedidos.cLugarOrigen, lstPedidos.cLugarDestino, lstPedidos.cTiempoEntrega, lstPedidos.cCostoEnvio, lstPedidos.cPaqueteria, new GeneradorArchivos());
                     }
 
                     PrintColorMsg("", lstPedidos.cEnvioBarato);
@@ -55,17 +55,20 @@ namespace ProyectoFinal
             }
         }
 
-        private void ImprimirMsgPaqueteEntregado(string _cOrigen, string _cDestino, string _cTiempoEntrega, double _cCostoEnvio, string _cPaqueteria)
+        private void ImprimirMsgPaqueteEntregado(string _cOrigen, string _cDestino, string _cTiempoEntrega, double _cCostoEnvio, string _cPaqueteria, GeneradorArchivos GABusiness)
         {
             string cMensajeEntregado = $"Tu paquete salio de {_cOrigen} y llegó a {_cDestino} hace {_cTiempoEntrega}, tuvo un costo de ${_cCostoEnvio} pesos. Cualquier Reclamación con {_cPaqueteria}.";
             PrintColorMsg("VERDE", cMensajeEntregado);
 
+            GABusiness.generarArchivo(_cPaqueteria, true, _cTiempoEntrega, cMensajeEntregado);
         }
 
-        private void ImprimirMsgPaqueteEnCamino(string _cOrigen, string _cDestino, string _cTiempoEntrega, double _cCostoEnvio, string _cPaqueteria)
+        private void ImprimirMsgPaqueteEnCamino(string _cOrigen, string _cDestino, string _cTiempoEntrega, double _cCostoEnvio, string _cPaqueteria, GeneradorArchivos GABusiness)
         {
             string cMensajeNoEntregado = $"Tu paquete ha salido de {_cOrigen} y llegará a {_cDestino} dentro de {_cTiempoEntrega}, tendra un costo de ${_cCostoEnvio} pesos. Cualquier Reclamación con {_cPaqueteria}.";
             PrintColorMsg("AMARILLO", cMensajeNoEntregado);
+
+            GABusiness.generarArchivo(_cPaqueteria, false, _cTiempoEntrega, cMensajeNoEntregado);
         }
 
         private bool ValidarMensajeVacio(string cMensaje)

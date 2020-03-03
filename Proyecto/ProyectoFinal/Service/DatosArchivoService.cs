@@ -15,5 +15,15 @@ namespace ProyectoFinal
         {
             return business.ObtenerDatosArchivo();
         }
+
+        public List<PedidosDTO> ObtenerDatosJSon(List<PedidosDTO> lstDatos)
+        {
+            return business.ObtenerDatosJSon(lstDatos);
+        }
+
+        public List<PaquetriasTransporteDTO> ObtenerDatosPaqueteriaJson(List<PaquetriasTransporteDTO> lstDatos)
+        {
+            return business.ObtenerDatosPaqueteriaJson(lstDatos);
+        }
     }
 }

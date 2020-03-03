@@ -1,0 +1,67 @@
+[
+  {
+    "MediosTransporte": [
+      {
+        "Medio": "Marítimo",
+        "Velocidad": 46,
+        "CostoPorKilometro":1 
+      },
+      {
+        "Medio": "Terrestre",
+        "Velocidad": 80,
+        "CostoPorKilometro": 5
+      },
+      {
+        "Medio": "Aéreo",
+        "Velocidad": 800,
+        "CostoPorKilometro": 10
+      }
+    ]
+  },
+  {
+    "Paqueterias": [
+      {
+        "Paqueteria": "Fedex",
+        "MargenUtilidad": 50,
+        "Medios": [
+          {
+            "Medio": "Marítimo"
+          },
+          {
+            "Medio": "Terrestre"
+          },
+          {
+            "Medio": "Aéreo"
+          }
+        ]
+      },
+      {
+        "Paqueteria": "DHL",
+        "MargenUtilidad": 40,
+        "Medios": [
+          {
+            "Medio": "Marítimo"
+          },
+          {
+            "Medio": "Terrestre"
+          },
+          {
+            "Medio": "Aéreo"
+          }
+        ]
+      },
+      {
+        "Paqueteria": "Estafeta",
+        "MargenUtilidad": 20,
+        "Medios": [
+          {
+            "Medio": "Marítimo"
+          },
+          {
+            "Medio": "Terrestre"
+          }
+        ]
+      }
+    ]
+  }
+]
