@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace ProyectoFinal
@@ -33,8 +32,6 @@ namespace ProyectoFinal
                 //Obtiene la información del archivo
                 datos = srvArchivo.ObtenerPedidos();
                 //datos2 = srvArchivo.ObtenerDatosJSon(datos2);
-
-
 
                 //Recorre la lista de pedidos
                 foreach (var lista in datos)

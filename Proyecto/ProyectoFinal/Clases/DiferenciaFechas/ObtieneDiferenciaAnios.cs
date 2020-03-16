@@ -13,7 +13,7 @@ namespace ProyectoFinal
 
         public override string ObtenerDiferenciaFechas()
         {
-            int iDiferenciaAnios = (DiferenciaAnios.Days/365);
+            int iDiferenciaAnios = (DiferenciaAnios.Days/364);
 
             if (iDiferenciaAnios != 0)
             {
